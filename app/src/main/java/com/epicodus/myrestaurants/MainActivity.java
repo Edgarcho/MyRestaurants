@@ -16,16 +16,18 @@ public class MainActivity extends AppCompatActivity {
     private EditText mLocationEditText;
     private TextView mAppNameTextView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
-        Typeface pacificoFont = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
-        mAppNameTextView.setTypeface(pacificoFont);
 
         mLocationEditText = (EditText) findViewById(R.id.locationEditText);
         mFindRestaurantsButton = (Button) findViewById(R.id.findRestaurantsButton);
+        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
+
+        Typeface pacificoFont = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
+        mAppNameTextView.setTypeface(pacificoFont);
 
         mFindRestaurantsButton.setOnClickListener(new View.OnClickListener() {
             @Override
