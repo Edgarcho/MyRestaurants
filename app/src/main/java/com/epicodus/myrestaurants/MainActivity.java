@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAppNameTextView.setTypeface(pacificoFont);
         mFindRestaurantsButton.setOnClickListener(this);
     }
+
     @Override
     public void OnClick(View v) {
         if (v == mFindRestaurantsButton) {

@@ -23,6 +23,7 @@ Run MyRestaurants by Android Studio Menu > Run > Run YourApp.
     * Java
     * Robolectric
     * Espresso
+    * OkHttp
 
 ## Support and contact details
 
