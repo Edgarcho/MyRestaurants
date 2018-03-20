@@ -11,7 +11,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
     @BindView(R.id.locationEditText) EditText mLocationEditText;
     @BindView(R.id.appNameTextView) TextView mAppNameTextView;
@@ -20,20 +20,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         ButterKnife.bind(this);
 
         Typeface pacificoFont = Typeface.createFromAsset(getAssets(), "fonts/pacifico.ttf");
         mAppNameTextView.setTypeface(pacificoFont);
-
-        mFindRestaurantsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String location = mLocationEditText.getText().toString();
-                Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
-                intent.putExtra("location", location);
-                startActivity(intent);
-            }
-        });
+        mFindRestaurantsButton.setOnClickListener(this);
+    }
+    @Override
+    public void OnClick(View v) {
+        if (v == mFindRestaurantsButton) {
+            String location = mLocationEditText.getText().toString();
+            Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
+            intent.putExtra("location", location);
+            startActivity(intent);
+        }
     }
 }
