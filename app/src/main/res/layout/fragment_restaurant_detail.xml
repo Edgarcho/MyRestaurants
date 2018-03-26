@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:id="@+id/restaurantImageView"
-            android:src="@drawable/waffles"
+            android:src="@drawable/dinner"
             android:scaleType="centerCrop" />
 
         <RelativeLayout
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:text="(503) 223-1282"
                     android:id="@+id/phoneTextView"
-                    android:drawableLeft="@drawable/ic_local_phone_white_24dp"
+                    android:drawableLeft="@drawable/ic_call_white_24dp"
                     android:drawablePadding="4dp"
                     android:textColor="@color/colorTextIcons"
                     android:textSize="15sp"
