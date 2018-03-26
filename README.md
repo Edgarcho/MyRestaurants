@@ -15,7 +15,8 @@ Import Project by Android Studio Menu > File > Import Project...
 Before running project, you will need an Yelp api key.
 
     1. Create a Yelp account, then select create new api app
-    2. Add api key to gradle.properties file
+    2. Create a new file named gradle.properties. Copy and paste inside the file 
+        org.gradle.jvmarg=-Xmx1536m
         YelpToken = "Bearer YOUR-UNIQUE-ACCESS-TOKEN-HERE"
 Run MyRestaurants by Android Studio Menu > Run > Run YourApp.
 
@@ -30,6 +31,7 @@ Run MyRestaurants by Android Studio Menu > Run > Run YourApp.
     * Robolectric
     * Espresso
     * OkHttp
+    * Picasso
 
 ## Support and contact details
 
