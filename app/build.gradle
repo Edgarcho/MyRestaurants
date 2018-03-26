@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     useLibrary 'org.apache.http.legacy'
 
-    repositories{
+    repositories {
         mavenCentral()
         jcenter()
     }
@@ -18,7 +18,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes.each{
+    buildTypes.each {
         it.buildConfigField 'String', 'YELP_TOKEN', YelpToken
     }
 
@@ -44,10 +44,10 @@ dependencies {
     testCompile 'org.robolectric:shadows-support-v4:3.0'
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2'){
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestCompile('com.android.support.test:runner:0.3'){
+    androidTestCompile('com.android.support.test:runner:0.3') {
         exclude group: 'com.android,support', module: 'support-annotations'
     }
 }
