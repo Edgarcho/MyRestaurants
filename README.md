@@ -32,6 +32,7 @@ Run MyRestaurants by Android Studio Menu > Run > Run YourApp.
     * Espresso
     * OkHttp
     * Picasso
+  * Firebase 
 
 ## Support and contact details
 
