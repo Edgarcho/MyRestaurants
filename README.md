@@ -1,6 +1,6 @@
 # MyRestaurants
 
-A mobile application that will display a list of restaurants by location.
+A mobile application that will display a list of restaurants by location. 
 
 By Edgar Hernandez Ortiz
 
