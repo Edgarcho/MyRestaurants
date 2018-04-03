@@ -22,10 +22,6 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-/**
- * Created by Edgar on 4/2/2018.
- */
-
 public class FirebaseRestaurantViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     private static final int MAX_WIDTH = 200;
     private static final int MAX_HEIGHT = 200;
@@ -49,6 +45,7 @@ public class FirebaseRestaurantViewHolder extends RecyclerView.ViewHolder implem
         Picasso.with(mContext)
                 .load(restaurant.getImageUrl())
                 .resize(MAX_WIDTH, MAX_HEIGHT)
+                .centerCrop()
                 .into(restaurantImageView);
 
         nameTextView.setText(restaurant.getName());
@@ -71,7 +68,7 @@ public class FirebaseRestaurantViewHolder extends RecyclerView.ViewHolder implem
                 int itemPosition = getLayoutPosition();
 
                 Intent intent = new Intent(mContext, RestaurantDetailActivity.class);
-                intent.putExtra("position", itemPosition + "");
+                intent.putExtra("position", itemPosition);
                 intent.putExtra("restaurants", Parcels.wrap(restaurants));
 
                 mContext.startActivity(intent);
