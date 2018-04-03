@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class RestaurantsDetailActivity extends AppCompatActivity {
+public class RestaurantDetailActivity extends AppCompatActivity {
     @BindView(R.id.viewPager) ViewPager mViewPager;
     private RestaurantPagerAdapter adapterViewPager;
     ArrayList<Restaurant> mRestaurants = new ArrayList<>();

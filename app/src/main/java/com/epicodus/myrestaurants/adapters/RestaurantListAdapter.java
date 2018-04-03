@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.epicodus.myrestaurants.R;
 import com.epicodus.myrestaurants.models.Restaurant;
-import com.epicodus.myrestaurants.ui.RestaurantsDetailActivity;
+import com.epicodus.myrestaurants.ui.RestaurantDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -80,7 +80,7 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
         @Override
         public void onClick(View view){
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, RestaurantsDetailActivity.class);
+            Intent intent = new Intent(mContext, RestaurantDetailActivity.class);
             intent.putExtra("position", itemPosition + "");
             intent.putExtra("restaurants", Parcels.wrap(mRestaurants));
             mContext.startActivity(intent);
