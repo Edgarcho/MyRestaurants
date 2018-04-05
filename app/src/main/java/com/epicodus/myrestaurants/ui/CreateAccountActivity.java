@@ -132,6 +132,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     }
 
     private void createAuthStateListener() {
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {

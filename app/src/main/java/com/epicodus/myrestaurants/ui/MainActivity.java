@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         });
 
@@ -84,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (user != null){
                     getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
                 }else{
-
                 }
             }
         };
@@ -131,7 +129,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
         if (v == mFindRestaurantsButton) {
             String location = mLocationEditText.getText().toString();
             saveLocationToFirebase(location);
@@ -147,6 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
     }
+
     public void saveLocationToFirebase(String location){
         mSearchedLocationReference.push().setValue(location);
     }
